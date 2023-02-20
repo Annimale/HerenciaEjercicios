@@ -7,6 +7,7 @@ package herencias;
 
 public class Pelicula extends Multimedia{
     private String actorPrincipal, actrizPrincipal;
+   
     public Pelicula(String titulo, String autor, format formato, String duracion, String actorPrincipal, String actrizPrincipal) throws Exception{
         super(titulo, autor, formato, duracion);
         

@@ -63,26 +63,7 @@ public class Multimedia {
         return "Titulo: " + titulo + "\nAutor: " + autor + "\nFormato: " + formato + "\nDuracion: " + duracion;
     }
 
-//    public boolean equals(String titulo, String autor) {
-//        boolean primero = false;
-//        boolean devolver = false;
-//        for (String titulo1 : titulos) {
-//            if (titulo == titulo1) {
-//                primero = true;
-//            }
-//            if (primero) {
-//                for (String autor1 : autores) {
-//                    if (autor == autor1) {
-//                        devolver = true;
-//                    } else {
-//                        devolver = false;
-//                    }
-//                }
-//            }
-//        }
-//        return devolver;
-//    }
-    
+
     
 
     public boolean equals(Multimedia m) {
@@ -93,8 +74,5 @@ public class Multimedia {
         return devolver;
     }
 
-//    public static void main(String[] args) {
-//        Multimedia prueba = new Multimedia("titulo", "autor", "formato", "duracion");
-//        prueba.multimediaToString();
-//    }
+
 }
