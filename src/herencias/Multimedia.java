@@ -13,10 +13,10 @@ public class Multimedia {
         wav, mp3, midi, avi, mov, mpg, cdAudio, dvd
     }
 
-    public String titulo;
-    public String autor;
-    public format formato;
-    public String duracion;
+    protected String titulo;
+    protected String autor;
+    protected format formato;
+    protected String duracion;
     ArrayList<String> titulos;
     ArrayList<String> autores;
 
