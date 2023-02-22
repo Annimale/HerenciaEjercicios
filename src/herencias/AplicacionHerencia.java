@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class AplicacionHerencia {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         ListaMultimedia listamultimedia = new ListaMultimedia(10);
 
         Scanner tcl = new Scanner(System.in);
@@ -34,12 +34,14 @@ public class AplicacionHerencia {
                 format formato = null;
 
                 System.out.println("----\nHA SELECCIONADO PELICULA\n-----");
+                tcl.nextLine();
 
                 System.out.println("Introduzca su titulo: ");
                 titulo = tcl.nextLine();
                 System.out.println("Introduzca su autor:  ");
                 autor = tcl.nextLine();
                 System.out.println("Introduzca la duracion");
+                duracion = tcl.nextLine();
 
                 System.out.println("Escoja su formato");
                 System.out.println("1. WAV");
@@ -69,7 +71,15 @@ public class AplicacionHerencia {
                     case 8:
                         formato = format.dvd;
                 }
-                Pelicula p1= new Pelicula (titulo, autor, formato, duracion, actorPrincipal, actrizPrincipal);
+                tcl.nextLine();
+
+                
+                System.out.println("Introduzca el actor principal");
+                actorPrincipal = tcl.nextLine();
+                System.out.println("Introduzca la actriz principal");
+                actrizPrincipal = tcl.nextLine();
+                Pelicula p1 = new Pelicula(titulo, autor, formato, duracion, actorPrincipal, actrizPrincipal);
+                System.out.println("Su pelicula ha sido creada correctamente");
                 break;
             case 2:
                 String genero = "";
@@ -78,20 +88,18 @@ public class AplicacionHerencia {
                 String duracionDisco = "";
                 format formatoDisco = null;
 
-                
-                
                 System.out.println("-----\nHA SELECCIONADO DISCO\n-----");
-                
-                 System.out.println("Introduzca su genero: ");
+                tcl.nextLine();
+
+                System.out.println("Introduzca su genero: ");
                 genero = tcl.nextLine();
                 System.out.println("Introduzca el titulo del disco:  ");
-               tituloDisco = tcl.nextLine();
+                tituloDisco = tcl.nextLine();
                 System.out.println("Introduzca el autor del disco");
-                autorDisco=tcl.nextLine();
+                autorDisco = tcl.nextLine();
                 System.out.println("Introduzca la duracion del disco");
-                duracionDisco=tcl.nextLine();
-                
-                
+                duracionDisco = tcl.nextLine();
+
                 System.out.println("Escoja su formato");
                 System.out.println("1. WAV");
                 System.out.println("2. MP3");
@@ -104,29 +112,32 @@ public class AplicacionHerencia {
                 int selecFormato2 = tcl.nextInt();
                 switch (selecFormato2) {
                     case 1:
-                        formato = format.wav;
+                        formatoDisco = format.wav;
                     case 2:
-                        formato = format.mp3;
+                        formatoDisco = format.mp3;
                     case 3:
-                        formato = format.midi;
+                        formatoDisco = format.midi;
                     case 4:
-                        formato = format.avi;
+                        formatoDisco = format.avi;
                     case 5:
-                        formato = format.mov;
+                        formatoDisco = format.mov;
                     case 6:
-                        formato = format.mpg;
+                        formatoDisco = format.mpg;
                     case 7:
-                        formato = format.cdAudio;
+                        formatoDisco = format.cdAudio;
                     case 8:
-                        formato = format.dvd;
+                        formatoDisco = format.dvd;
                         break;
                 }
-                Disco d1= new Disco()
+                DISCO d1 = new DISCO(genero, tituloDisco, autorDisco, formatoDisco, duracionDisco);
+
+                System.out.println("Su disco ha sido creado correctamente");
+                break;
             case 3:
                 System.out.println("-----\nUSTED HA SALIDO\n-----");
                 break;
 
         }
-        System.out.println("Has cerrado el programa");
+
     }
 }
