@@ -80,6 +80,7 @@ public class AplicacionHerencia {
                 actrizPrincipal = tcl.nextLine();
                 Pelicula p1 = new Pelicula(titulo, autor, formato, duracion, actorPrincipal, actrizPrincipal);
                 System.out.println("Su pelicula ha sido creada correctamente");
+                listamultimedia.add(p1);
                 break;
             case 2:
                 String genero = "";
@@ -130,7 +131,7 @@ public class AplicacionHerencia {
                         break;
                 }
                 DISCO d1 = new DISCO(genero, tituloDisco, autorDisco, formatoDisco, duracionDisco);
-
+                listamultimedia.add(d1);
                 System.out.println("Su disco ha sido creado correctamente");
                 break;
             case 3:
