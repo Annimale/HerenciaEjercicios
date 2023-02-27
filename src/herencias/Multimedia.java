@@ -59,7 +59,7 @@ public class Multimedia {
         this.duracion = duracion;
     }
 
-    public String multimediaToString() {
+    public String toString() {
         return "Titulo: " + titulo + "\nAutor: " + autor + "\nFormato: " + formato + "\nDuracion: " + duracion;
     }
 

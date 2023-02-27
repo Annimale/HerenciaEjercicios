@@ -16,14 +16,14 @@ public class AplicacionHerencia {
 
         int seleccionar;
         // wav, mp3, midi, avi, mov, mpg, cdAudio, dvd
-
+do {
+        
         System.out.println("BIENVENIDO AL VIDEOCLUB PARIS DE VALENCIA: seleccione si quiere registrar una pelicula o disco");
         System.out.println("1. PELICULA");
         System.out.println("2. DISCO");
         System.out.println("3. SALIR");
         System.out.println("································");
         seleccionar = tcl.nextInt();
-
         switch (seleccionar) {
             case 1:
                 String titulo = "";
@@ -72,15 +72,29 @@ public class AplicacionHerencia {
                         formato = format.dvd;
                 }
                 tcl.nextLine();
+                boolean erroneo;
+                do {
+                    System.out.println("Introduzca el actor principal:  ");
+                    actorPrincipal = tcl.nextLine();
+                    System.out.println("Introduzca la actriz principal");
+                    actrizPrincipal = tcl.nextLine();
+                    erroneo = true;
+                    try {
+                        Pelicula p1 = new Pelicula(titulo, autor, formato, duracion, actorPrincipal, actrizPrincipal);
+                        erroneo = false;
+                        listamultimedia.add(p1);
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
+                } while (erroneo);
 
-                
-                System.out.println("Introduzca el actor principal");
-                actorPrincipal = tcl.nextLine();
-                System.out.println("Introduzca la actriz principal");
-                actrizPrincipal = tcl.nextLine();
-                Pelicula p1 = new Pelicula(titulo, autor, formato, duracion, actorPrincipal, actrizPrincipal);
-                System.out.println("Su pelicula ha sido creada correctamente");
-                listamultimedia.add(p1);
+//                System.out.println("Introduzca el actor principal");
+//                actorPrincipal = tcl.nextLine();
+//                System.out.println("Introduzca la actriz principal");
+//                actrizPrincipal = tcl.nextLine();
+//                Pelicula p1 = new Pelicula(titulo, autor, formato, duracion, actorPrincipal, actrizPrincipal);
+//                System.out.println("Su pelicula ha sido creada correctamente");
+                //listamultimedia.add(p1);
                 break;
             case 2:
                 String genero = "";
@@ -88,9 +102,9 @@ public class AplicacionHerencia {
                 String autorDisco = "";
                 String duracionDisco = "";
                 format formatoDisco = null;
-
+                
                 System.out.println("-----\nHA SELECCIONADO DISCO\n-----");
-                tcl.nextLine();
+                 tcl.nextLine();
 
                 System.out.println("Introduzca su genero: ");
                 genero = tcl.nextLine();
@@ -139,6 +153,7 @@ public class AplicacionHerencia {
                 break;
 
         }
-
+            
+        } while (seleccionar!=3);
     }
 }
