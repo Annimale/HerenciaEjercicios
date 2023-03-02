@@ -42,7 +42,7 @@ public class Polimorfismo {
 
         }
         System.out.println("Minutos totales de la lista:  " + total);
-        
+        //Cuantas peliculaes hay sin actriz
         int contadorSinActriz=0;
         for (int i = 0; i < multiLista.size(); i++) {
             if (multiLista.get(i) instanceof Pelicula) {
@@ -53,5 +53,17 @@ public class Polimorfismo {
         }
     }
         System.out.println("Peliculas sin actriz: "+contadorSinActriz);
+        
+        //Cuantos discos hay de rock
+         int contadorRock=0;
+        for (int i = 0; i < multiLista.size(); i++) {
+            if (multiLista.get(i) instanceof DISCO) {
+               if(((DISCO)(multiLista.get(i))).getGenero().toLowerCase().equals("rock")){//
+                contadorRock++;
+            }
+            
+        }
+    }
+        System.out.println("Discos totales de genero Rock:  "+contadorRock);
 }
 }
