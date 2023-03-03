@@ -30,4 +30,11 @@ public class PolimorfismoCamion extends PolimorfismoCocheCamion{
     }
     
     
+    public void  acelerarCamion(int velocidad) throws DemasiadoRapidoException{
+        if((super.velocidad+velocidad)>100 && this.remolque!=null){
+           throw new DemasiadoRapidoException("Frena o quita el remolque");
+     
+        
+    }
+}
 }

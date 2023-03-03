@@ -43,5 +43,7 @@ public class PolimorfismoCocheCamion {
     public void acelerar(int velocidad){
         this.velocidad+=velocidad;
     }
+
+  
     
 }
