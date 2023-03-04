@@ -11,6 +11,10 @@ package herencias;
 public class PolimorfismoCocheCamion {
     protected String matricula;
     protected int velocidad;
+    
+
+    
+    
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;

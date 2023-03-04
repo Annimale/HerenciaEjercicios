@@ -8,33 +8,32 @@ package herencias;
  *
  * @author skril
  */
-public class PolimorfismoCamion extends PolimorfismoCocheCamion{
-    
-    protected String remolque;
+public class PolimorfismoCamion extends PolimorfismoCocheCamion {
+
+    protected Remolque remolque;
 
     public PolimorfismoCamion(String matricula) {
         super(matricula);
         this.remolque = null;
     }
 
-    public void ponRemolque(){
-        this.remolque="Remolque puesto";
+    public void ponRemolque(Remolque remolque) {
+        this.remolque = remolque;
     }
-     public void quitarRemolque(){
-        this.remolque=null;
+
+    public void quitarRemolque() {
+        this.remolque = null;
     }
 
     @Override
     public String toString() {
-        return super.toString()+"PolimorfismoCamion{" + "remolque=" + remolque + '}';//Metemos el super despues del return para cuando hagamos un toString de camion nos de la informacion tambine de la matricula y de la velocidad
+        return super.toString() + "PolimorfismoCamion{" + "remolque=" + remolque + '}';//Metemos el super despues del return para cuando hagamos un toString de camion nos de la informacion tambine de la matricula y de la velocidad
     }
-    
-    
-    public void  acelerarCamion(int velocidad) throws DemasiadoRapidoException{
-        if((super.velocidad+velocidad)>100 && this.remolque!=null){
-           throw new DemasiadoRapidoException("Frena o quita el remolque");
-     
-        
+
+    public void acelerarCamion(int velocidad) throws DemasiadoRapidoException {
+        if ((super.velocidad + velocidad) > 100 && this.remolque != null) {
+            throw new DemasiadoRapidoException("Frena o quita el remolque");
+
+        }
     }
-}
 }
