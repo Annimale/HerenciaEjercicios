@@ -17,6 +17,8 @@ public class DISCO extends Multimedia{
         this.genero = genero;
     }
 
+   
+
     public String getGenero() {
         return genero;
     }

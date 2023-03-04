@@ -33,10 +33,10 @@ public class PolimorfismoAPPCocheCamion {
                 ((PolimorfismoCamion)(arraySito.get(i))).ponRemolque(generalRemolque);
                 
             }
-            arraySito.get(i).acelerar(120);
+            arraySito.get(i).acelerar(80);
             System.out.println("Vehiculo: "+i+",   "+arraySito.get(i).toString());
         }
-             kamion1.acelerarCamion(120);
+             kamion1.acelerarCamion();
         System.out.println(kamion1.toString());
         
         
